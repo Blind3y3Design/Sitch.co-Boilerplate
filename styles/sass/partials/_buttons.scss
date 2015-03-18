@@ -1,0 +1,171 @@
+button, .btn, .btn:visited, .button, .button:visited, input[type="submit"], input[type="reset"], input[type="button"] {
+	position: relative;
+	vertical-align: middle;
+	padding: 0.5em 1em;
+	line-height: 1em;
+	box-sizing: border-box;
+	cursor: pointer;
+	width: auto;
+	font-weight: normal;
+	font-size: 1em;
+	text-decoration: none;
+	display: inline-block;
+	transition: all 0.25s ease;
+	
+	@include button-color($grey);
+
+	// Color Variants
+	// To create a new color define the color variable in the _variables.scss partial and follow the style below
+	&.blue {
+		@include button-color($blue);
+		
+		&.gradient {
+			@include gradient($blue);
+		}
+		&.borderless {
+			@include button-color($blue, $borderless: true);
+		}
+	}
+	&.purple {
+		@include button-color($purple);
+		
+		&.gradient {
+			@include gradient($purple);
+		}
+		&.borderless {
+			@include button-color($purple, $borderless: true);
+		}
+	}
+	&.light-purple {
+		@include button-color($light-purple);
+		
+		&.gradient {
+			@include gradient($light-purple);
+		}
+		&.borderless {
+			@include button-color($light-purple, $borderless: true);
+		}
+	}
+	&.orange {
+		@include button-color($orange);
+		
+		&.gradient {
+			@include gradient($orange);
+		}
+		&.borderless {
+			@include button-color($orange, $borderless: true);
+		}
+	}
+	&.green {
+		@include button-color($green);
+		
+		&.gradient {
+			@include gradient($green);
+		}
+		&.borderless {
+			@include button-color($green, $borderless: true);
+		}
+	}
+	&.red {
+		@include button-color($red);
+		
+		&.gradient {
+			@include gradient($red);
+		}
+		&.borderless {
+			@include button-color($red, $borderless: true);
+		}
+	}
+
+	// Size and Style Variants
+	&.small {
+		font-size: 0.8em;
+	}
+	&.large {
+		font-size: 1.3em;
+	}
+
+	&.rounded {
+		border-radius: 0.5em;
+	}
+	&.pill {
+		border-radius: 2em;
+	}
+	&.shadow {
+		box-shadow: 0px 1px 5px rgba(0,0,0,0.2);
+	}
+	&.borderless {
+		@include button-color($grey, $borderless: true);
+	}
+	&.disabled {
+		@include button-disabled($grey);
+	}
+}
+button:hover, .btn:hover, .button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+	@include button-color-hover($grey);
+
+	// Color Variants
+	// To create a new color define the color variable in the _variables.scss partial and follow the style below
+	&.blue {
+		@include button-color-hover($blue);
+		&.gradient {
+			@include gradient-hover($blue);
+		}
+		&.borderless {
+			@include button-color-hover($blue, $borderless: true);
+		}
+	}
+	&.purple {
+		@include button-color-hover($purple);
+		&.gradient {
+			@include gradient-hover($purple);
+		}
+		&.borderless {
+			@include button-color-hover($purple, $borderless: true);
+		}
+	}
+	&.light-purple {
+		@include button-color-hover($light-purple);
+		&.gradient {
+			@include gradient-hover($light-purple);
+		}
+		&.borderless {
+			@include button-color-hover($light-purple, $borderless: true);
+		}
+	}
+	&.orange {
+		@include button-color-hover($orange);
+		&.gradient {
+			@include gradient-hover($orange);
+		}
+		&.borderless {
+			@include button-color-hover($orange, $borderless: true);
+		}
+	}
+	&.green {
+		@include button-color-hover($green);
+		&.gradient {
+			@include gradient-hover($green);
+		}
+		&.borderless {
+			@include button-color-hover($green, $borderless: true);
+		}
+	}
+	&.red {
+		@include button-color-hover($red);
+		&.gradient {
+			@include gradient-hover($red);
+		}
+		&.borderless {
+			@include button-color-hover($red, $borderless: true);
+		}
+	}
+	
+	// Style Variants
+	&.borderless {
+		@include button-color-hover($grey, $borderless: true);
+	}
+	&.disabled {
+		@include button-disabled-hover($grey);
+	}
+}

@@ -1,0 +1,61 @@
+// Pattern Library Page Specific Styles
+
+//Variables 
+$black: #000;
+$white: #fff;
+$font-stack: HelveticaNeue, Helvetica, Arial, sans-serif;
+
+// Layout
+.sg-body {
+	font-family: $font-stack;
+}
+.sg-header {
+	background: $black;
+	color: $white;
+	box-sizing: border-box;
+	padding: 2rem;
+	font-size: 1.5em;
+	font-family: $font-stack;
+}
+.sg-section {
+	margin: 1rem auto;
+	padding: 1rem;
+	border: 1px solid;
+	border-radius: 1em;
+	background: #fff;
+}
+.sg-doc {
+border-bottom: 1px solid #ddd;
+margin-bottom: 1em;
+}
+.sg-h1, .sg-h2, .sg-h3, .sg-h4{
+font-weight: normal;
+margin-bottom: 1em;
+margin-top: 0;
+line-height: 1.4;
+}
+.sg-h2 {
+	font-size:1.5em;
+	border-bottom: 2px solid #ddd;
+}
+.sg-h3 {
+	font-size:1.2em;
+	margin-bottom: 0.5em;
+}
+.sg-h4 {
+	font-size:1.2em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+.sg-p {
+	margin: 1em 0;
+}
+.sg-example-wrapper {
+
+	button, a.button, input[type="button"] {
+		margin-bottom: 10px;
+	}
+	[class*="col_"] {
+		padding: 10px;
+	}
+}

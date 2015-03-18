@@ -1,0 +1,52 @@
+@mixin button-color ($color, $borderless: false) {
+	background: $color;
+	border: 1px solid darken( $color, 10% );
+	@if $borderless {border: none;} 
+}
+@mixin button-color-hover ($color, $borderless: false) {
+	background: darken( $color, 10% );
+	border: 1px solid darken( $color, 20% );
+	@if $borderless {border: none;} 
+}
+@mixin button-disabled ($color, $borderless: false) {
+	color: $color;
+	background: lighten($color, 10%);
+	border: 1px solid lighten( $color, 5% );
+	@if $borderless {border: none;} 
+}
+@mixin button-disabled-hover ($color, $borderless: false) {
+	color: $color;
+	background: lighten($color, 10%);
+	border: 1px solid lighten( $color, 5% );
+	@if $borderless {border: none;} 
+	cursor: default;
+}
+
+@mixin gradient ($color) {
+	background-color: $color; /* Fallback Color */
+	background-image: -webkit-gradient(linear, left top, left bottom, from($color), to(darken( $color, 7% ))); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, $color, darken( $color, 7% )); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, $color, darken( $color, 7% )); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, $color, darken( $color, 7% )); /* IE10 */
+	background-image:      -o-linear-gradient(top, $color, darken( $color, 7% )); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, $color, darken( $color, 7% ));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$color}', EndColorStr='#{darken( $color, 7% )}');
+}
+@mixin gradient-hover ($color) {
+	background-color: darken( $color, 5% ); /* Fallback Color */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(darken( $color, 5% )), to(darken( $color, 12% ))); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, darken( $color, 5% ), darken( $color, 12% )); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, darken( $color, 5% ), darken( $color, 12% )); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, darken( $color, 5% ), darken( $color, 12% )); /* IE10 */
+	background-image:      -o-linear-gradient(top, darken( $color, 5% ), darken( $color, 12% )); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, darken( $color, 5% ), darken( $color, 12% ));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{darken( $color, 10% )}', EndColorStr='#{darken( $color, 12% )}');
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
