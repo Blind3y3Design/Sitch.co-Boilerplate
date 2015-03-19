@@ -15,9 +15,9 @@ This project contains everything you need to get up and running on a Sitch.co la
 #### Mac
 1. Download project and place inside htdocs folder
 2. Navigate to project folder in the terminal
-3. Run `npm install`
+3. Run `$ npm install`
 4. Open gruntfile.js and change <project name> to the name of the folder in MAMP
-5. Run `grunt`
+5. Run `$ grunt`
 6. Grunt should open the local project inside your default browser and attach BrowserSync.
 
 #### Windows
