@@ -11,4 +11,10 @@
 </div>
 
 <?php include '_includes/footer.php' ?>
+
+<?php
+	// Uncomment for Email Subscription Form
+	// include '_modules/_subscription-form.php'
+?>
+
 <?php include '_includes/footer_inc.php' ?>
