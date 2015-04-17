@@ -1,40 +1,39 @@
 $(document).ready(function() {
 
-	$('.js-subscription').on('click', function(e) {
+	$('.js-contact').on('click', function(e) {
 		e.preventDefault;
 		$('#modal').addClass('active');
+		$('#modal #contact-form').addClass('active');
 	});
 	$('.js-modal-close').on('click', function(e) {
 		e.preventDefault;
 		$('#modal').removeClass('active');
+		$('#modal').children().removeClass('active');
 	});
 
-	// Subscription Ajax
-    $('#submit_button').click(function(e){
+	// contact Ajax
+    $('#contact .submit_button').click(function(e){
     	e.preventDefault();
     	// console.log('form submit');
 
-    	if (! ($('#first-name').val())) {
+    	if (! ($('#contact .first-name').val())) {
     		e.preventDefault();
-    		$('#first-name').addClass('error');
-    	} else if (! ($('#last-name').val())) {
+    		$('#contact .first-name').addClass('error');
+    	} else if (! ($('#contact .last-name').val())) {
     		e.preventDefault();
-    		$('#last-name').addClass('error');
-    	} else if (! ($('#email').val())) {
+    		$('#contact .last-name').addClass('error');
+    	} else if (! ($('#contact .email').val())) {
     		e.preventDefault();
-    		$('#email').addClass('error');
-    	} else if (! ($('#state').val())) {
+    		$('#contact .email').addClass('error');
+    	} else if (! ($('#contact .message').val())) {
     		e.preventDefault();
-    		$('#state').addClass('error');
-    	} else if (! ($('#zip').val())) {
-    		e.preventDefault();
-    		$('#zip').addClass('error');
+    		$('#contact .message').addClass('error');
     	} else {
-    		var post_url = '_modules/_subscription-process.php';
+    		var post_url = '_modules/modal/contact/_contact-process.php';
 	        $.ajax({
 	            type : 'POST',
 	            url : post_url,
-	            data: $('#subscription').serialize(), //ID of your form
+	            data: $('#contact').serialize(), //ID of your form
 	            dataType : 'html',
 	            async: true,
 	            beforeSend:function(){
@@ -43,8 +42,8 @@ $(document).ready(function() {
 	            },
 	            success : function(data){
 	            	$('#modal').removeClass('active');
-	            	$('.subscription-input').removeClass('error');
-	                $('#subscription')[0].reset();
+	            	$('.contact-input').removeClass('error');
+	                $('#contact')[0].reset();
 	            },
 	            error : function() {
 	            	alert('error');

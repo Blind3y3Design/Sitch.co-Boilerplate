@@ -29,7 +29,8 @@
             float: none;
             vertical-align: middle;
 
-            #form-wrapper {
+            .form-wrapper {
+                display: none;
                 background: $grey;
                 margin: 0 auto;
                 float: none;
@@ -49,6 +50,10 @@
                     width: 100%;
                     min-width: 0;
                     height: 100%;                   
+                }
+
+                &.active {
+                    display: block;
                 }
             }
 
@@ -99,7 +104,7 @@ form {
             font-size:0.9em;
         }
     }
-    input {
+    input, textarea {
         width: 100%;
         padding: 0.8em 0.5em;
         border: none;

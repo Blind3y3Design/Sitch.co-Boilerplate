@@ -24,5 +24,6 @@
 	        })(window,document,'script','dataLayer','XXX-XXXXXX');
 	    </script>
 		<!-- End Google Tag Manager -->
+		<?php include '_modules/_modal.php' ?>
     </body>
 </html>

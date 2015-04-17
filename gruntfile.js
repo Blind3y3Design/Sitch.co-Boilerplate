@@ -30,7 +30,9 @@ module.exports = function(grunt) {
 			dist: {
 				src: [
 					'scripts/libs/*.js',
-					'scripts/scripts.js'
+					'scripts/modules/*.js',
+					'scripts/custom.js'
+
 				],
 				dest: 'scripts/scripts.js'
 			}
@@ -53,7 +55,7 @@ module.exports = function(grunt) {
 				},
 				options: {
 					watchTask: true,
-					proxy: "localhost:8888/<project name>/"
+					proxy: "localhost:8888/LandingPage_BoilerPlate/"
 				}
 			}
 		}

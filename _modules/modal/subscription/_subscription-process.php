@@ -1,7 +1,7 @@
 <?php
 //CONNECTION VARIABLES
 $server_location = "localhost";
-$database = "dearevan";
+$database = "dbname";
 $username = "maximus";
 $password = "ltiS950+";
 
@@ -25,7 +25,7 @@ if ($_POST) {
 
         $db = mysql_connect($server_location,$username,$password);
         mysql_select_db($database,$db);
-        $query = "INSERT INTO signups (first_name,last_name,email,state,zip,email_signup,created)
+        $query = "INSERT INTO signup_form (first_name,last_name,email,state,zip,email_signup,created)
            VALUES ('".mysql_real_escape_string($first_name)."','".mysql_real_escape_string($last_name)."',
               '".mysql_real_escape_string($email)."','".mysql_real_escape_string($state)."','".mysql_real_escape_string($zip)."',
               '".mysql_real_escape_string($signup)."','".date("Y-m-d H:i:s")."')";
