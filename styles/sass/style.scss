@@ -1,11 +1,12 @@
 /*Include Libraries*/
-@import 'lib/meyer-reset';
+// @import 'lib/meyer-reset';
 @import 'lib/99lime-grid';
 
 // Include Mixins
 @import 'partials/_mixins';
 
 // Include Partials
+@import 'partials/_foundation';
 @import 'partials/_variables';
 @import 'partials/_layout';
 @import 'partials/_privacy';

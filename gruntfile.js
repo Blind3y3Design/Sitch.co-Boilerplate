@@ -55,7 +55,7 @@ module.exports = function(grunt) {
 				},
 				options: {
 					watchTask: true,
-					proxy: "localhost:8888/LandingPage_BoilerPlate/"
+					proxy: "localhost:8888/Sitch.co-Boilerplate/"
 				}
 			}
 		}
